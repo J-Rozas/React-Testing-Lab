@@ -26,4 +26,15 @@ describe("Calculator", () => {
     cy.get('.display').should('have.text', '5');
   })
 
+
+  it('should be able to chain multiple operations', () => {
+    cy.get('#number2').click();
+    cy.get('#operator_add').click();
+    cy.get('#number3').click();
+    cy.get('#operator-subtract').click();
+    cy.get('#number6').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '-1');
+  })
+
 })
