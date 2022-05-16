@@ -108,4 +108,13 @@ describe("Calculator", () => {
     cy.get('#operator-equals').click();
     cy.get('.display').should('have.text', '1.6');
   })
+
+
+  it('should return an error if trying to divide by 0', () => {
+    cy.get('#number8').click();
+    cy.get('#operator-divide').click();
+    cy.get('#number0').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', 'Error');
+  })
 })
