@@ -78,4 +78,25 @@ describe("Calculator", () => {
     cy.get('#operator-equals').click();
     cy.get('.display').should('have.text', '180000000000003');
   })
+
+  
+  it('should work for big size negative outputs', () => {
+    cy.get('#number2').click();
+    cy.get('#operator-subtract').click();
+    cy.get('#number2').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '-1999999999998');
+  })
 })
