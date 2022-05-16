@@ -37,4 +37,45 @@ describe("Calculator", () => {
     cy.get('.display').should('have.text', '-1');
   })
 
+
+  it('should work for normal size positive outputs', () => {
+    cy.get('#number2').click();
+    cy.get('#operator-multiply').click();
+    cy.get('#number9').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '18');
+  })
+
+
+  it('should work for normal size positive outputs', () => {
+    cy.get('#number2').click();
+    cy.get('#operator-multiply').click();
+    cy.get('#number9').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '18');
+  })
+
+  
+  it('should work for big size positive outputs', () => {
+    cy.get('#number2').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#operator-multiply').click();
+    cy.get('#number9').click();
+    cy.get('#operator_add').click();
+    cy.get('#number3').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '180000000000003');
+  })
 })
