@@ -99,4 +99,13 @@ describe("Calculator", () => {
     cy.get('#operator-equals').click();
     cy.get('.display').should('have.text', '-1999999999998');
   })
+
+
+  it('should work decimal outputs outputs', () => {
+    cy.get('#number8').click();
+    cy.get('#operator-divide').click();
+    cy.get('#number5').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '1.6');
+  })
 })
