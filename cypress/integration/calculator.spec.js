@@ -17,4 +17,13 @@ describe("Calculator", () => {
     cy.get('.display').should('have.text', '1023456789')
   })
 
+
+  it('should be able to update the display with mathematical operations', () => {
+    cy.get('#number2').click();
+    cy.get('#operator_add').click();
+    cy.get('#number3').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '5');
+  })
+
 })
