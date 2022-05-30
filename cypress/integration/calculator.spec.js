@@ -65,7 +65,7 @@ describe("Calculator", () => {
     cy.get('.display').should('have.text', '-1');
   })
 
-
+  // Test for normal size positive output
   it('should work for normal size positive outputs', () => {
     cy.get('#number2').click();
     cy.get('#operator-multiply').click();
@@ -74,16 +74,7 @@ describe("Calculator", () => {
     cy.get('.display').should('have.text', '18');
   })
 
-
-  it('should work for normal size positive outputs', () => {
-    cy.get('#number2').click();
-    cy.get('#operator-multiply').click();
-    cy.get('#number9').click();
-    cy.get('#operator-equals').click();
-    cy.get('.display').should('have.text', '18');
-  })
-
-  
+  // Test for large size positive output
   it('should work for big size positive outputs', () => {
     cy.get('#number2').click();
     cy.get('#number0').click();
@@ -107,7 +98,7 @@ describe("Calculator", () => {
     cy.get('.display').should('have.text', '180000000000003');
   })
 
-  
+  // Test for negative output
   it('should work for big size negative outputs', () => {
     cy.get('#number2').click();
     cy.get('#operator-subtract').click();
@@ -128,7 +119,7 @@ describe("Calculator", () => {
     cy.get('.display').should('have.text', '-1999999999998');
   })
 
-
+  // Test for decimal output
   it('should work decimal outputs outputs', () => {
     cy.get('#number8').click();
     cy.get('#operator-divide').click();
