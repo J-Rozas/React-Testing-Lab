@@ -15,6 +15,7 @@ describe('Calculator', () => {
     expect(runningTotal.textContent).toEqual('4');
   })
 
+  // Test for add
   it('should be able to add two numbers', () => {
     const button1 = container.getByTestId('number1');
     const buttonAdd = container.getByTestId('operator_add');
@@ -28,6 +29,7 @@ describe('Calculator', () => {
     expect(runningTotal.textContent).toEqual('5');
   });
 
+  // Test for subtract
   it('should be able to subtract two numbers', () => {
     const button4 = container.getByTestId('number4');
     const buttonSubtract = container.getByTestId('operator_subtract');
@@ -41,6 +43,7 @@ describe('Calculator', () => {
     expect(runningTotal.textContent).toEqual('3');
   });
 
+  // Test for multiply
   it('should be able to multiply two numbers', () => {
     const button3 = container.getByTestId('number3');
     const buttonMultiply = container.getByTestId('operator_multiply');
@@ -54,6 +57,7 @@ describe('Calculator', () => {
     expect(runningTotal.textContent).toEqual('15');
   });
 
+  // Test for divide
   it('should be able to divide two numbers', () => {
     const button3 = container.getByTestId('number3');
     const buttonMultiply = container.getByTestId('operator_multiply');
@@ -67,6 +71,7 @@ describe('Calculator', () => {
     expect(runningTotal.textContent).toEqual('15');
   });
 
+  // Test for divide #2
   it('should be able to divide two numbers', () => {
     const button2 = container.getByTestId('number2');
     const buttonDivide = container.getByTestId('operator_divide');
