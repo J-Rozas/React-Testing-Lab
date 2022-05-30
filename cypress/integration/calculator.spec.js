@@ -18,12 +18,40 @@ describe("Calculator", () => {
   })
 
 
-  it('should be able to update the display with mathematical operations', () => {
+  // Test for add
+  it('should be able to update the display with mathematical operations for addition', () => {
     cy.get('#number2').click();
     cy.get('#operator_add').click();
     cy.get('#number3').click();
     cy.get('#operator-equals').click();
     cy.get('.display').should('have.text', '5');
+  })
+
+  // Test for subtract
+  it('should be able to update the display with mathematical operations for subtraction', () => {
+    cy.get('#number4').click();
+    cy.get('#operator-subtract').click();
+    cy.get('#number3').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '1');
+  })
+
+  // Test for multiply
+  it('should be able to update the display with mathematical operations for multiplication', () => {
+    cy.get('#number2').click();
+    cy.get('#operator-multiply').click();
+    cy.get('#number3').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '6');
+  })
+
+  // Test for divide
+  it('should be able to update the display with mathematical operations for division', () => {
+    cy.get('#number6').click();
+    cy.get('#operator-divide').click();
+    cy.get('#number3').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('have.text', '2');
   })
 
 
